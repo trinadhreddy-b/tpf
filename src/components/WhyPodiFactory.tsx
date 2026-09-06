@@ -8,9 +8,9 @@ export const WhyPodiFactory: React.FC = () => {
   return (
     <section id="why-us-section" className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-md sm:max-w-2xl lg:max-w-4xl mx-auto space-y-8 sm:space-y-10">
-        
+
         {/* Text and Our Story Button */}
-        <div className="space-y-4 max-w-xl">
+        <div className="space-y-4 w-full">
           <h2
             id="why-us-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-serif-brand tracking-tight"
@@ -23,10 +23,12 @@ export const WhyPodiFactory: React.FC = () => {
             className="text-base sm:text-lg text-brand-on-surface-variant font-sans-brand leading-relaxed"
             style={{ color: 'var(--color-on-surface-variant)' }}
           >
-            We bring you the taste of tradition, made the old-fashioned way - for your healthy, flavorful meals.
+            We bring you the taste of tradition, made the old-fashioned way to make your meal more flavourful.
+
+            Made in small batches with care, the same way we do it for our children and family.
           </p>
 
-          <div className="pt-2">
+          {/* <div className="pt-2">
             <button
               id="btn-our-story"
               onClick={() => setIsStoryModalOpen(true)}
@@ -40,11 +42,11 @@ export const WhyPodiFactory: React.FC = () => {
               <BookOpen className="w-4 h-4" />
               <span>OUR STORY</span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Artisanal Photography matching screenshot */}
-        <div
+        {/* <div
           className="w-full relative aspect-square sm:aspect-16/9 rounded-2xl overflow-hidden shadow-sm bg-brand-surface-container border border-brand-outline-variant/30 group"
           style={{
             backgroundColor: 'var(--color-surface-container)',
@@ -52,13 +54,13 @@ export const WhyPodiFactory: React.FC = () => {
           }}
         >
           <img
-            src="https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/footer_image.png"
-            alt="Traditional Andhra Podi Craftsmanship"
+            src="https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/all_podis.jpeg"
+            alt="Traditional Podi Recipes"
             className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          
+
           <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:bottom-6 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
               <p className="text-xs font-label-brand tracking-widest uppercase text-amber-300 font-bold">
@@ -72,6 +74,21 @@ export const WhyPodiFactory: React.FC = () => {
               Guntur & Godavari Heritage
             </span>
           </div>
+        </div> */}
+        {/* Artisanal Photography matching screenshot */}
+        <div
+          className="w-full relative aspect-video rounded-2xl overflow-hidden shadow-sm bg-brand-surface-container border border-brand-outline-variant/30 group"
+          style={{
+            backgroundColor: 'var(--color-surface-container)',
+            borderColor: 'var(--color-outline-variant)',
+          }}
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/allpodi_updated.png"
+            alt="Traditional Podi Recipes"
+            className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
+            referrerPolicy="no-referrer"
+          />
         </div>
 
       </div>

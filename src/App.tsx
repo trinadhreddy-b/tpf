@@ -62,7 +62,7 @@ const MainAppContent: React.FC = () => {
         <PodisCatalog />
 
         {/* 4-Item Feature Badges */}
-        <FeatureHighlights />
+        {/* <FeatureHighlights /> */}
 
         {/* Why The Podi Factory Section */}
         <WhyPodiFactory />
