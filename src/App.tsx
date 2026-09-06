@@ -18,7 +18,6 @@ import { ProductDetailModal } from './components/ProductDetailModal';
 import { CartDrawer } from './components/CartDrawer';
 import { NavigationDrawer } from './components/NavigationDrawer';
 import { ThemeCustomizerDrawer } from './components/ThemeCustomizerDrawer';
-import { OurStoryModal } from './components/OurStoryModal';
 import { ContactModal } from './components/ContactModal';
 
 import { Instagram, MessageSquare, ShoppingBag } from 'lucide-react';
@@ -113,7 +112,6 @@ const MainAppContent: React.FC = () => {
       <CartDrawer />
       <NavigationDrawer />
       <ThemeCustomizerDrawer />
-      <OurStoryModal />
       <ContactModal />
     </div>
   );

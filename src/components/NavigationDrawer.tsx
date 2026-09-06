@@ -57,7 +57,7 @@ export const NavigationDrawer: React.FC = () => {
               <h3 className="font-serif-brand text-xl text-brand-primary font-bold">
                 {settings.storeName}
               </h3>
-              <p className="text-[11px] text-brand-on-surface-variant">Traditional Andhra Podis</p>
+              <p className="text-[11px] text-brand-on-surface-variant">Traditional Podis</p>
             </div>
             <button
               onClick={() => setIsMenuDrawerOpen(false)}
@@ -73,7 +73,7 @@ export const NavigationDrawer: React.FC = () => {
               <span className="text-[10px] font-label-brand font-bold uppercase tracking-widest text-brand-muted px-3">
                 Navigation
               </span>
-              
+
               <button
                 onClick={() => handleNavClick('home')}
                 className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-brand-surface-container text-brand-on-surface text-sm font-medium transition cursor-pointer text-left"
@@ -98,7 +98,7 @@ export const NavigationDrawer: React.FC = () => {
                 <span>Why The Podi Factory</span>
               </button>
 
-              <button
+              {/* <button
                 onClick={() => {
                   setIsMenuDrawerOpen(false);
                   setIsStoryModalOpen(true);
@@ -107,7 +107,7 @@ export const NavigationDrawer: React.FC = () => {
               >
                 <BookOpen className="w-4 h-4 text-brand-primary" />
                 <span>Our Heritage Story</span>
-              </button>
+              </button> */}
 
               <button
                 onClick={() => {

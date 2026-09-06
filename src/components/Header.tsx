@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
         >
           <img
             id="brand-logo-img"
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="The Podi Factory Logo"
             className="h-[80%] sm:h-[88%] w-auto max-h-12 sm:max-h-16 object-contain rounded-md shrink-0"
             onError={(e) => {
