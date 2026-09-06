@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { MessageSquare, Camera, ShieldCheck, Palette, Heart } from 'lucide-react';
+import { MessageSquare, Camera, Palette, Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const {
@@ -9,9 +9,6 @@ export const Footer: React.FC = () => {
     getInstagramDmUrl,
     setIsStoryModalOpen,
     setIsContactModalOpen,
-    setIsAdminModalOpen,
-    isAdminAuthenticated,
-    setIsAdminDashboardOpen,
     setIsThemeDrawerOpen,
   } = useStore();
 
@@ -36,7 +33,7 @@ export const Footer: React.FC = () => {
       }}
     >
       <div className="max-w-4xl mx-auto space-y-10">
-        
+
         {/* Brand & Subtitle matching screenshot */}
         <div className="space-y-2">
           <h3
@@ -54,7 +51,7 @@ export const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Quick Links Section matching screenshot */}
+        {/* Quick Links Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-2">
           <div className="space-y-3">
             <h4 className="text-xs font-label-brand font-bold tracking-widest uppercase text-brand-on-surface">
@@ -95,24 +92,10 @@ export const Footer: React.FC = () => {
                   Contact
                 </button>
               </li>
-              <li className="pt-1">
-                <button
-                  onClick={() =>
-                    isAdminAuthenticated
-                      ? setIsAdminDashboardOpen(true)
-                      : setIsAdminModalOpen(true)
-                  }
-                  className="flex items-center gap-1 text-xs text-brand-primary font-semibold hover:underline cursor-pointer"
-                  style={{ color: 'var(--color-primary)' }}
-                >
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>{isAdminAuthenticated ? 'Admin Dashboard' : 'Admin Login'}</span>
-                </button>
-              </li>
             </ul>
           </div>
 
-          {/* Follow Us Section matching screenshot */}
+          {/* Follow Us Section */}
           <div className="space-y-3">
             <h4 className="text-xs font-label-brand font-bold tracking-widest uppercase text-brand-on-surface">
               FOLLOW US
@@ -144,25 +127,25 @@ export const Footer: React.FC = () => {
                 <Camera className="w-5 h-5" strokeWidth={1.8} />
               </a>
 
-              <button
+              {/* <button
                 onClick={() => setIsThemeDrawerOpen(true)}
                 className="p-2.5 rounded-full bg-brand-surface-card hover:bg-brand-surface text-brand-on-surface hover:text-brand-primary border border-brand-outline-variant/40 shadow-xs transition cursor-pointer ml-2"
                 title="Change Website Theme"
               >
                 <Palette className="w-5 h-5" strokeWidth={1.8} />
-              </button>
+              </button> */}
             </div>
             <p className="text-xs text-brand-muted pt-1">
-              Direct message us for bulk wedding favors, corporate gifting & international courier.
+              Direct message us for bulk wedding orders, corporate gifting & international courier.
             </p>
           </div>
         </div>
 
-        {/* Copyright notice matching screenshot */}
+        {/* Copyright notice */}
         <div className="pt-8 border-t border-brand-outline-variant/30 text-center text-xs text-brand-muted font-sans-brand flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© 2026 {settings.storeName}. All rights reserved.</span>
           <span className="flex items-center gap-1">
-            Handcrafted with <Heart className="w-3 h-3 text-red-600 fill-current inline" /> in Andhra Pradesh
+            Handcrafted with Love<Heart className="w-3 h-3 text-red-600 fill-current inline" />
           </span>
         </div>
 

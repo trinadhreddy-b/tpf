@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, Flame, MessageSquare, ShoppingBag, Check, Sparkles, UtensilsCrossed, HeartPulse, Edit3 } from 'lucide-react';
+import { X, Flame, MessageSquare, ShoppingBag, Check, Sparkles, UtensilsCrossed, HeartPulse } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const ProductDetailModal: React.FC = () => {
@@ -9,8 +9,6 @@ export const ProductDetailModal: React.FC = () => {
     setSelectedPodi,
     addToCart,
     getWhatsAppOrderUrl,
-    isAdminAuthenticated,
-    setIsAdminDashboardOpen,
   } = useStore();
 
   const [selectedWeightIdx, setSelectedWeightIdx] = useState<number>(1);
@@ -81,20 +79,6 @@ export const ProductDetailModal: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              {isAdminAuthenticated && (
-                <button
-                  onClick={() => {
-                    setSelectedPodi(null);
-                    setIsAdminDashboardOpen(true);
-                  }}
-                  className="p-1.5 text-xs font-semibold text-brand-primary flex items-center gap-1 hover:bg-brand-surface-container rounded cursor-pointer"
-                  title="Edit in Admin Dashboard"
-                >
-                  <Edit3 className="w-4 h-4" />
-                  <span className="hidden sm:inline">Edit in Admin</span>
-                </button>
-              )}
-
               <button
                 id="close-podi-modal-btn"
                 onClick={() => setSelectedPodi(null)}

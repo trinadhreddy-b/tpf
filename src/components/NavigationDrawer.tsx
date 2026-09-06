@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, Home, ShoppingBag, BookOpen, Phone, Palette, ShieldCheck, LogOut, ArrowRight, MessageSquare, Camera } from 'lucide-react';
+import { X, Home, ShoppingBag, BookOpen, Phone, Palette, ArrowRight, MessageSquare, Camera } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const NavigationDrawer: React.FC = () => {
@@ -10,11 +10,6 @@ export const NavigationDrawer: React.FC = () => {
     setIsStoryModalOpen,
     setIsContactModalOpen,
     setIsThemeDrawerOpen,
-    setIsAdminModalOpen,
-    isAdminAuthenticated,
-    adminUser,
-    logoutAdmin,
-    setIsAdminDashboardOpen,
     getWhatsAppOrderUrl,
     getInstagramDmUrl,
     settings,
@@ -96,11 +91,11 @@ export const NavigationDrawer: React.FC = () => {
               </button>
 
               <button
-                onClick={() => handleNavClick('features-section')}
+                onClick={() => handleNavClick('why-us-section')}
                 className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-brand-surface-container text-brand-on-surface text-sm font-medium transition cursor-pointer text-left"
               >
                 <ArrowRight className="w-4 h-4 text-brand-primary" />
-                <span>What Makes Us Different</span>
+                <span>Why The Podi Factory</span>
               </button>
 
               <button
@@ -147,66 +142,6 @@ export const NavigationDrawer: React.FC = () => {
                   Live
                 </span>
               </button>
-            </div>
-
-            {/* Admin Portal Section */}
-            <div className="space-y-2 pt-2 border-t border-brand-outline-variant/30">
-              <span className="text-[10px] font-label-brand font-bold uppercase tracking-widest text-brand-muted px-3">
-                Administration Portal
-              </span>
-
-              {isAdminAuthenticated ? (
-                <div className="p-3 bg-brand-surface-container rounded-xl space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                      <span className="text-xs font-bold text-brand-on-surface">
-                        {adminUser?.name || 'Admin'}
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-1.5 py-0.5 rounded">
-                      Logged In
-                    </span>
-                  </div>
-
-                  <button
-                    onClick={() => {
-                      setIsMenuDrawerOpen(false);
-                      setIsAdminDashboardOpen(true);
-                    }}
-                    className="w-full py-2 text-xs font-bold bg-brand-primary text-white rounded-brand-btn transition cursor-pointer flex items-center justify-center gap-1.5"
-                    style={{ backgroundColor: 'var(--color-primary)' }}
-                  >
-                    <span>Open Admin Dashboard</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-
-                  <button
-                    onClick={() => {
-                      logoutAdmin();
-                      setIsMenuDrawerOpen(false);
-                    }}
-                    className="w-full py-1.5 text-xs text-red-600 hover:bg-red-50 rounded transition cursor-pointer flex items-center justify-center gap-1.5"
-                  >
-                    <LogOut className="w-3.5 h-3.5" />
-                    <span>Sign Out Admin</span>
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={() => {
-                    setIsMenuDrawerOpen(false);
-                    setIsAdminModalOpen(true);
-                  }}
-                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-brand-surface-container hover:bg-brand-surface-container-high text-brand-on-surface text-sm font-medium transition cursor-pointer text-left"
-                >
-                  <div className="flex items-center gap-3">
-                    <ShieldCheck className="w-4 h-4 text-brand-primary" />
-                    <span>Admin Login & Dashboard</span>
-                  </div>
-                  <span className="text-[10px] text-brand-muted">Secure</span>
-                </button>
-              )}
             </div>
 
             {/* Social Direct Links */}

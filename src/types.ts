@@ -5,6 +5,8 @@ export interface PodiWeightOption {
   originalPrice?: number;
 }
 
+export type PodiCategory = 'leafy' | 'traditional' | 'lentils' | 'combos';
+
 export interface PodiItem {
   id: string;
   name: string;
@@ -16,7 +18,8 @@ export interface PodiItem {
   weights: PodiWeightOption[];
   spiciness: 1 | 2 | 3; // 1: Mild, 2: Medium, 3: Andhra Fiery
   image: string;
-  category: 'leafy' | 'traditional' | 'lentils' | 'combos';
+  category: PodiCategory | PodiCategory[];
+  categories?: PodiCategory[];
   ingredients: string[];
   healthBenefits: string[];
   servingSuggestions: string[];
@@ -59,11 +62,4 @@ export interface StoreSettings {
   announcement: string;
   upiId: string;
   currencySymbol: string;
-}
-
-export interface AdminUser {
-  email: string;
-  name: string;
-  role: 'super_admin' | 'store_manager';
-  lastLogin: string;
 }

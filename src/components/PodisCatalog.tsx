@@ -28,7 +28,12 @@ export const PodisCatalog: React.FC = () => {
   ];
 
   const filteredPodis = podis.filter((podi) => {
-    const matchesCat = activeCategory === 'all' || podi.category === activeCategory;
+    const podiCats = Array.isArray(podi.category)
+      ? podi.category
+      : podi.categories
+      ? podi.categories
+      : [podi.category];
+    const matchesCat = activeCategory === 'all' || podiCats.includes(activeCategory as any);
     const matchesSearch =
       podi.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       podi.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||

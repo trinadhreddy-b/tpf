@@ -9,7 +9,6 @@ import { AnnouncementBar } from './components/AnnouncementBar';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { PodisCatalog } from './components/PodisCatalog';
-import { FeatureHighlights } from './components/FeatureHighlights';
 import { WhyPodiFactory } from './components/WhyPodiFactory';
 import { PlaceOrderSection } from './components/PlaceOrderSection';
 import { Footer } from './components/Footer';
@@ -18,13 +17,11 @@ import { Footer } from './components/Footer';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CartDrawer } from './components/CartDrawer';
 import { NavigationDrawer } from './components/NavigationDrawer';
-import { AdminLoginModal } from './components/AdminLoginModal';
-import { AdminDashboard } from './components/AdminDashboard';
 import { ThemeCustomizerDrawer } from './components/ThemeCustomizerDrawer';
 import { OurStoryModal } from './components/OurStoryModal';
 import { ContactModal } from './components/ContactModal';
 
-import { Instagram, MessageSquare, ShoppingBag, ShieldCheck } from 'lucide-react';
+import { Instagram, MessageSquare, ShoppingBag } from 'lucide-react';
 
 const MainAppContent: React.FC = () => {
   const {
@@ -32,8 +29,6 @@ const MainAppContent: React.FC = () => {
     getInstagramDmUrl,
     setIsCartDrawerOpen,
     getCartCount,
-    isAdminAuthenticated,
-    setIsAdminDashboardOpen,
   } = useStore();
 
   const cartCount = getCartCount();
@@ -53,16 +48,13 @@ const MainAppContent: React.FC = () => {
       {/* Primary Sticky Header */}
       <Header />
 
-      {/* Main Page Flow mirroring screenshot */}
+      {/* Main Page Flow */}
       <main className="flex-1">
         {/* Hero Section */}
         <HeroSection />
 
         {/* Our Podis Catalog */}
         <PodisCatalog />
-
-        {/* 4-Item Feature Badges */}
-        {/* <FeatureHighlights /> */}
 
         {/* Why The Podi Factory Section */}
         <WhyPodiFactory />
@@ -83,7 +75,7 @@ const MainAppContent: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="p-3.5 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center group"
-          title="Follow us on Instagram (@thepodifactory)"
+          title="Follow us on Instagram (@the_podifactory)"
         >
           <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
         </a>
@@ -120,8 +112,6 @@ const MainAppContent: React.FC = () => {
       <ProductDetailModal />
       <CartDrawer />
       <NavigationDrawer />
-      <AdminLoginModal />
-      <AdminDashboard />
       <ThemeCustomizerDrawer />
       <OurStoryModal />
       <ContactModal />

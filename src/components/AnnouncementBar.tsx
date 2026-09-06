@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { Palette, ShieldCheck, Sparkles } from 'lucide-react';
+import { Palette, Sparkles } from 'lucide-react';
 
 export const AnnouncementBar: React.FC = () => {
-  const { settings, setIsThemeDrawerOpen, isAdminAuthenticated, setIsAdminDashboardOpen, setIsAdminModalOpen } = useStore();
+  const { settings, setIsThemeDrawerOpen } = useStore();
 
   return (
     <div
@@ -24,15 +24,6 @@ export const AnnouncementBar: React.FC = () => {
           >
             <Palette className="w-3 h-3" />
             <span>Theme</span>
-          </button>
-          <span className="opacity-40">|</span>
-          <button
-            id="quick-admin-link"
-            onClick={() => (isAdminAuthenticated ? setIsAdminDashboardOpen(true) : setIsAdminModalOpen(true))}
-            className="flex items-center gap-1 opacity-90 hover:opacity-100 hover:underline cursor-pointer text-xs font-semibold tracking-wider uppercase font-label-brand px-2 py-0.5 rounded transition"
-          >
-            <ShieldCheck className="w-3 h-3" />
-            <span>{isAdminAuthenticated ? 'Admin Dashboard' : 'Admin Login'}</span>
           </button>
         </div>
       </div>

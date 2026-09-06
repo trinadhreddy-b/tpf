@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { MessageSquare, Camera, Menu, ShoppingBag, ShieldCheck } from 'lucide-react';
+import { MessageSquare, Camera, Menu, ShoppingBag } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const {
@@ -10,8 +10,6 @@ export const Header: React.FC = () => {
     getCartCount,
     setIsCartDrawerOpen,
     setIsMenuDrawerOpen,
-    isAdminAuthenticated,
-    setIsAdminDashboardOpen,
   } = useStore();
 
   const cartCount = getCartCount();
@@ -46,22 +44,8 @@ export const Header: React.FC = () => {
           <span>{settings.storeName}</span>
         </a>
 
-        {/* Action Icons matching design screenshot */}
+        {/* Action Icons */}
         <div className="flex items-center gap-2 sm:gap-4">
-          {/* Admin quick badge if logged in */}
-          {isAdminAuthenticated && (
-            <button
-              id="header-admin-badge"
-              onClick={() => setIsAdminDashboardOpen(true)}
-              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded bg-brand-primary-container text-white cursor-pointer hover:opacity-90 shadow-xs"
-              style={{ backgroundColor: 'var(--color-primary-container)' }}
-              title="Open Admin Dashboard"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Admin Active</span>
-            </button>
-          )}
-
           {/* WhatsApp Direct Chat Icon */}
           <a
             id="header-whatsapp-btn"
