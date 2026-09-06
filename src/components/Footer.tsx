@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
             className="text-sm text-brand-on-surface-variant font-sans-brand"
             style={{ color: 'var(--color-on-surface-variant)' }}
           >
-            Traditional Andhra Podis made with love.
+            Traditional Podis made with love.
           </p>
         </div>
 

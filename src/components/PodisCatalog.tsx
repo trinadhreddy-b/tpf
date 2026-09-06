@@ -183,9 +183,9 @@ export const PodisCatalog: React.FC = () => {
                 >
                   {/* Badge */}
                   {podi.badge && (
-                    <div className="absolute top-6 left-6 z-10">
+                    <div className="absolute -top-2.5 left-4 sm:left-5 z-10">
                       <span
-                        className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white rounded shadow-xs"
+                        className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white rounded-md shadow-sm"
                         style={{ backgroundColor: 'var(--color-primary-container)' }}
                       >
                         {podi.badge}
