@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { MessageSquare, Camera, Palette, Heart } from 'lucide-react';
+import { Palette, Heart } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 
 export const Footer: React.FC = () => {
   const {
@@ -111,7 +112,7 @@ export const Footer: React.FC = () => {
                 aria-label="WhatsApp"
                 title="Chat on WhatsApp"
               >
-                <MessageSquare className="w-5 h-5" strokeWidth={1.8} />
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
 
               <a
@@ -124,7 +125,7 @@ export const Footer: React.FC = () => {
                 aria-label="Instagram"
                 title="Follow on Instagram"
               >
-                <Camera className="w-5 h-5" strokeWidth={1.8} />
+                <InstagramIcon className="w-5 h-5" />
               </a>
 
               {/* <button

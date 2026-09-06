@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { MessageSquare, Camera } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 
 export const PlaceOrderSection: React.FC = () => {
   const { getWhatsAppOrderUrl, getInstagramDmUrl, setIsContactModalOpen } = useStore();
@@ -41,7 +41,7 @@ export const PlaceOrderSection: React.FC = () => {
               borderRadius: 'var(--radius-btn)',
             }}
           >
-            <MessageSquare className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
             <span>ORDER ON WHATSAPP</span>
           </a>
 
@@ -58,7 +58,7 @@ export const PlaceOrderSection: React.FC = () => {
               borderRadius: 'var(--radius-btn)',
             }}
           >
-            <Camera className="w-4 h-4" />
+            <InstagramIcon className="w-4 h-4 text-pink-600" />
             <span>DM US ON INSTAGRAM</span>
           </a>
         </div>

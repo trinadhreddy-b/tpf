@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
 import { PodiItem } from '../types';
-import { Flame, Eye, ShoppingBag, MessageSquare, Search, Sparkles } from 'lucide-react';
+import { Flame, Eye, ShoppingBag, Search, Sparkles } from 'lucide-react';
+import { WhatsAppIcon } from './Icons';
 import { motion } from 'motion/react';
 
 export const PodisCatalog: React.FC = () => {
@@ -335,7 +336,7 @@ export const PodisCatalog: React.FC = () => {
                           style={{ borderRadius: 'var(--radius-btn)' }}
                           title="Instant WhatsApp Order for this Podi"
                         >
-                          <MessageSquare className="w-4 h-4" />
+                          <WhatsAppIcon className="w-4 h-4" />
                         </a>
                       </div>
                     </div>

@@ -86,39 +86,6 @@ export const HeroSection: React.FC = () => {
     <section id="home" className="pt-4 pb-12 sm:pb-16 px-4 sm:px-6">
       <div className="max-w-md sm:max-w-2xl lg:max-w-4xl mx-auto flex flex-col items-center text-left sm:text-center">
 
-        {/* Top Tag & Info Bar above Image Card */}
-        <div className="w-full flex items-center justify-between mb-3 px-1">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={slide.id}
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 4 }}
-              transition={{ duration: 0.3 }}
-              className="inline-flex"
-            >
-              <span
-                className="px-3.5 py-1 text-xs font-semibold tracking-wider uppercase rounded-full text-white flex items-center gap-1.5 shadow-sm"
-                style={{ backgroundColor: 'var(--color-primary)' }}
-              >
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                {slide.tag}
-              </span>
-            </motion.div>
-          </AnimatePresence>
-
-          <div
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase border border-brand-outline-variant/30 text-brand-primary"
-            style={{
-              backgroundColor: 'var(--color-surface-container)',
-              color: 'var(--color-primary)',
-            }}
-          >
-            <Flame className="w-3.5 h-3.5 text-red-600 animate-pulse" />
-            <span>Authentic Recipes</span>
-          </div>
-        </div>
-
         {/* Main Hero Visual Card with Image & Decorative Fallback */}
         <div
           id="hero-image-container"
@@ -146,8 +113,22 @@ export const HeroSection: React.FC = () => {
                 className="w-full h-full object-contain drop-shadow-md group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
+
+              {/* Badge overlay on slide */}
+              <div className="absolute top-4 left-4 z-10">
+                <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-black/60 text-white backdrop-blur-md flex items-center gap-1.5 border border-white/20 shadow-sm">
+                  <Sparkles className="w-3 h-3 text-amber-300" />
+                  {slide.tag}
+                </span>
+              </div>
             </motion.div>
           </AnimatePresence>
+
+          {/* Artistic Frame Accent */}
+          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-bold tracking-widest text-brand-primary uppercase shadow-xs">
+            <Flame className="w-3 h-3 text-red-600 animate-bounce" />
+            <span>Authentic Recipes</span>
+          </div>
         </div>
 
         {/* Hero Headings */}

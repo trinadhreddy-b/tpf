@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, MessageSquare, Camera, Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { X, Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const ContactModal: React.FC = () => {
@@ -83,7 +84,7 @@ export const ContactModal: React.FC = () => {
                 rel="noopener noreferrer"
                 className="p-3 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl flex flex-col items-center justify-center text-center gap-1.5 hover:bg-emerald-100 transition shadow-2xs"
               >
-                <MessageSquare className="w-5 h-5 text-emerald-600" />
+                <WhatsAppIcon className="w-5 h-5 text-emerald-600" />
                 <span className="text-xs font-bold font-label-brand uppercase tracking-wider">
                   WhatsApp Us
                 </span>
@@ -96,7 +97,7 @@ export const ContactModal: React.FC = () => {
                 rel="noopener noreferrer"
                 className="p-3 bg-rose-50 text-rose-800 border border-rose-200 rounded-xl flex flex-col items-center justify-center text-center gap-1.5 hover:bg-rose-100 transition shadow-2xs"
               >
-                <Camera className="w-5 h-5 text-rose-600" />
+                <InstagramIcon className="w-5 h-5 text-pink-600" />
                 <span className="text-xs font-bold font-label-brand uppercase tracking-wider">
                   Instagram DM
                 </span>

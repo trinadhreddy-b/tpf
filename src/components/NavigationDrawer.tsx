@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, Home, ShoppingBag, BookOpen, Phone, Palette, ArrowRight, MessageSquare, Camera } from 'lucide-react';
+import { X, Home, ShoppingBag, BookOpen, Phone, Palette, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const NavigationDrawer: React.FC = () => {
@@ -156,7 +157,7 @@ export const NavigationDrawer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="p-2.5 flex items-center justify-center gap-2 text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition"
                 >
-                  <MessageSquare className="w-3.5 h-3.5" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
                   <span>WhatsApp</span>
                 </a>
                 <a
@@ -165,7 +166,7 @@ export const NavigationDrawer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="p-2.5 flex items-center justify-center gap-2 text-xs font-semibold rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition"
                 >
-                  <Camera className="w-3.5 h-3.5" />
+                  <InstagramIcon className="w-4 h-4 text-pink-600" />
                   <span>Instagram</span>
                 </a>
               </div>

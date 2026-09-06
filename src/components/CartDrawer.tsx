@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, Trash2, ShoppingBag, MessageSquare, Camera, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { X, Trash2, ShoppingBag, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const CartDrawer: React.FC = () => {
@@ -252,7 +253,7 @@ export const CartDrawer: React.FC = () => {
                   borderRadius: 'var(--radius-btn)',
                 }}
               >
-                <MessageSquare className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>CONFIRM ORDER ON WHATSAPP (₹{grandTotal})</span>
               </button>
 
@@ -264,7 +265,7 @@ export const CartDrawer: React.FC = () => {
                 className="w-full py-2.5 px-4 font-label-brand text-xs font-bold tracking-widest uppercase border border-brand-outline text-brand-on-surface hover:bg-brand-surface-container active:scale-98 transition-all cursor-pointer rounded-brand-btn flex items-center justify-center gap-2"
                 style={{ borderRadius: 'var(--radius-btn)' }}
               >
-                <Camera className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4 text-pink-600" />
                 <span>OR DM ON INSTAGRAM</span>
               </a>
 

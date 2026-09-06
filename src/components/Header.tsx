@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { MessageSquare, Camera, Menu, ShoppingBag } from 'lucide-react';
+import { Menu, ShoppingBag } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './Icons';
 
 export const Header: React.FC = () => {
   const {
@@ -57,10 +58,10 @@ export const Header: React.FC = () => {
             aria-label="Order on WhatsApp"
             title="Chat & Order via WhatsApp"
           >
-            <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.8} />
+            <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
 
-          {/* Instagram Camera Icon */}
+          {/* Instagram Icon */}
           <a
             id="header-instagram-btn"
             href={getInstagramDmUrl()}
@@ -71,7 +72,7 @@ export const Header: React.FC = () => {
             aria-label="Follow & DM on Instagram"
             title="DM us on Instagram"
           >
-            <Camera className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.8} />
+            <InstagramIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
 
           {/* Shopping Bag / Cart */}

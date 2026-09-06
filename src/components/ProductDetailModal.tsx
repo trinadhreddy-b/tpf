@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { X, Flame, MessageSquare, ShoppingBag, Check, Sparkles, UtensilsCrossed, HeartPulse } from 'lucide-react';
+import { X, Flame, ShoppingBag, Check, Sparkles, UtensilsCrossed, HeartPulse } from 'lucide-react';
+import { WhatsAppIcon } from './Icons';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const ProductDetailModal: React.FC = () => {
@@ -309,7 +310,7 @@ export const ProductDetailModal: React.FC = () => {
               className="w-full sm:w-auto py-3.5 px-6 font-label-brand text-xs font-bold tracking-widest uppercase border border-emerald-600 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 active:scale-98 transition-all cursor-pointer rounded-brand-btn flex items-center justify-center gap-2"
               style={{ borderRadius: 'var(--radius-btn)' }}
             >
-              <MessageSquare className="w-4 h-4 text-emerald-600" />
+              <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
               <span>ORDER ON WHATSAPP</span>
             </button>
           </div>

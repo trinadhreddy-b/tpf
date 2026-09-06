@@ -20,7 +20,8 @@ import { NavigationDrawer } from './components/NavigationDrawer';
 import { ThemeCustomizerDrawer } from './components/ThemeCustomizerDrawer';
 import { ContactModal } from './components/ContactModal';
 
-import { Instagram, MessageSquare, ShoppingBag } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './components/Icons';
 
 const MainAppContent: React.FC = () => {
   const {
@@ -76,7 +77,7 @@ const MainAppContent: React.FC = () => {
           className="p-3.5 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center group"
           title="Follow us on Instagram (@the_podifactory)"
         >
-          <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+          <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
         </a>
 
         {/* Floating WhatsApp Direct Order */}
@@ -85,10 +86,10 @@ const MainAppContent: React.FC = () => {
           href={getWhatsAppOrderUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center"
+          className="p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center group"
           title="Direct WhatsApp Order"
         >
-          <MessageSquare className="w-5 h-5" />
+          <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
         </a>
 
         {/* Floating Cart Button (if items in cart) */}
