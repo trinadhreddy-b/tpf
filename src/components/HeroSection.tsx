@@ -135,11 +135,15 @@ export const HeroSection: React.FC = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Artistic Frame Accent */}
-            <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-white uppercase shadow-xs border border-white/20">
+            {/* Image content */}
+          </div>
+
+          {/* Tag placed on bottom-right border matching top tag placement */}
+          <div className="absolute -bottom-3.5 right-4 sm:right-6 z-20">
+            <span className="flex items-center gap-1.5 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-white uppercase shadow-sm border border-white/20">
               <Flame className="w-3 h-3 text-red-400" />
               <span>Authentic Recipes</span>
-            </div>
+            </span>
           </div>
         </div>
 
