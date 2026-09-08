@@ -89,45 +89,57 @@ export const HeroSection: React.FC = () => {
         {/* Main Hero Visual Card with Image & Decorative Fallback */}
         <div
           id="hero-image-container"
-          className="w-full relative aspect-square sm:aspect-4/3 max-h-[460px] rounded-2xl overflow-hidden shadow-sm mb-8 sm:mb-10 bg-brand-surface-container flex items-center justify-center border border-brand-outline-variant/40 group"
+          className="w-full relative aspect-square sm:aspect-4/3 max-h-[460px] rounded-2xl shadow-sm mb-8 sm:mb-10 bg-brand-surface-container flex items-center justify-center border border-brand-outline-variant/40 group"
           style={{
             backgroundColor: 'var(--color-surface-container)',
             borderColor: 'var(--color-outline-variant)',
           }}
         >
-          {/* Subtle Ambient Glow behind the product image */}
-          <div className="absolute inset-0 bg-radial from-amber-500/10 via-transparent to-transparent pointer-events-none" />
+          {/* Tag placed on top-left border with previous styling */}
+          <div className="absolute -top-3.5 left-4 sm:left-6 z-20">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={slide.id}
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 4 }}
+                transition={{ duration: 0.25 }}
+                className="px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-black/75 text-white backdrop-blur-md flex items-center gap-1.5 border border-white/20 shadow-sm"
+              >
+                <Sparkles className="w-3 h-3 text-amber-300 shrink-0" />
+                <span>{slide.tag}</span>
+              </motion.span>
+            </AnimatePresence>
+          </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={slide.id}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className="absolute inset-0 w-full h-full flex items-center justify-center p-3 sm:p-5"
-            >
-              <img
-                src={slide.image}
-                alt={slide.imageAlt}
-                className="w-full h-full object-contain drop-shadow-md group-hover:scale-102 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
+          {/* Inner rounded container with overflow-hidden for image carousel and ambient glow */}
+          <div className="absolute inset-0 rounded-2xl overflow-hidden flex items-center justify-center">
+            {/* Subtle Ambient Glow behind the product image */}
+            <div className="absolute inset-0 bg-radial from-amber-500/10 via-transparent to-transparent pointer-events-none" />
 
-              {/* Badge overlay on slide */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-black/60 text-white backdrop-blur-md flex items-center gap-1.5 border border-white/20 shadow-sm">
-                  <Sparkles className="w-3 h-3 text-amber-300" />
-                  {slide.tag}
-                </span>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={slide.id}
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="absolute inset-0 w-full h-full flex items-center justify-center p-3 sm:p-5"
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.imageAlt}
+                  className="w-full h-full object-contain drop-shadow-md group-hover:scale-102 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            </AnimatePresence>
 
-          {/* Artistic Frame Accent */}
-          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-bold tracking-widest text-brand-primary uppercase shadow-xs">
-            <Flame className="w-3 h-3 text-red-600 animate-bounce" />
-            <span>Authentic Recipes</span>
+            {/* Artistic Frame Accent */}
+            <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-white uppercase shadow-xs border border-white/20">
+              <Flame className="w-3 h-3 text-red-400" />
+              <span>Authentic Recipes</span>
+            </div>
           </div>
         </div>
 
