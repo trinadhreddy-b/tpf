@@ -152,7 +152,7 @@ export const ProductDetailModal: React.FC = () => {
                     <label className="text-xs font-label-brand font-bold uppercase tracking-wider text-brand-on-surface">
                       Select Pack Size:
                     </label>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className={`grid gap-2 ${selectedPodi.weights.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
                       {selectedPodi.weights.map((w, idx) => (
                         <button
                           key={w.grams || idx}

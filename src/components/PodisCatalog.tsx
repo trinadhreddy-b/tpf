@@ -25,7 +25,7 @@ export const PodisCatalog: React.FC = () => {
     { id: 'leafy', label: '🌿 Leafy Superfoods' },
     { id: 'traditional', label: '🌶️ Traditional Karams' },
     { id: 'lentils', label: '🥜 Lentils & Seeds' },
-    { id: 'combos', label: '🎁 Gift & Value Boxes' },
+    { id: 'combos', label: '🎁 Gift & Combos' },
   ];
 
   const filteredPodis = podis.filter((podi) => {
@@ -103,16 +103,16 @@ export const PodisCatalog: React.FC = () => {
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex items-center justify-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-2xl mx-auto px-1">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 id={`cat-filter-${cat.id}`}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-3.5 py-1.5 text-xs font-semibold rounded-full whitespace-nowrap transition-all cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-semibold rounded-full transition-all cursor-pointer border ${
                   activeCategory === cat.id
-                    ? 'text-white shadow-xs'
-                    : 'bg-brand-surface-container text-brand-on-surface hover:bg-brand-surface-container-high'
+                    ? 'text-white border-transparent shadow-xs scale-102'
+                    : 'bg-brand-surface-container border-brand-outline-variant/40 text-brand-on-surface hover:bg-brand-surface-container-high'
                 }`}
                 style={{
                   backgroundColor:

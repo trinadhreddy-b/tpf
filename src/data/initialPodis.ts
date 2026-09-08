@@ -8,23 +8,17 @@ export const INITIAL_PODIS: PodiItem[] = [
     tagline: 'Drumstick leaves with bold spices',
     description:
       'Our crown jewel. Hand-picked organic drumstick (Moringa) leaves sun-dried to lock in vital iron and antioxidants, slow-roasted with Guntur red chillies, garlic cloves, cumin, and roasted chana dal in stone mortar.',
-    price: 299,
-    originalPrice: 349,
+    price: 80,
     weights: [
+      {
+        grams: 50,
+        label: '50g Pouch',
+        price: 40,
+      },
       {
         grams: 100,
         label: '100g Pouch',
-        price: 160,
-      },
-      {
-        grams: 200,
-        label: '200g Jar',
-        price: 299,
-      },
-      {
-        grams: 500,
-        label: '500g Value Pack',
-        price: 680,
+        price: 80,
       },
     ],
     spiciness: 2,
@@ -61,23 +55,17 @@ export const INITIAL_PODIS: PodiItem[] = [
     tagline: 'Aromatic tender curry leaves & roasted lentils',
     description:
       'Fresh country curry leaves washed, sun-dehydrated, and stone-pounded with coriander seeds, black peppercorns, roasted lentils, and tamarind for an unmistakable earthy aroma and vibrant flavor punch.',
-    price: 279,
-    originalPrice: 320,
+    price: 80,
     weights: [
+      {
+        grams: 50,
+        label: '50g Pouch',
+        price: 40,
+      },
       {
         grams: 100,
         label: '100g Pouch',
-        price: 150,
-      },
-      {
-        grams: 200,
-        label: '200g Jar',
-        price: 279,
-      },
-      {
-        grams: 500,
-        label: '500g Value Pack',
-        price: 640,
+        price: 80,
       },
     ],
     spiciness: 2,
@@ -114,23 +102,17 @@ export const INITIAL_PODIS: PodiItem[] = [
     tagline: 'Classic roasted chana dal & fiery Guntur chillies',
     description:
       'A timeless Andhra favourite. Premium roasted chana dal (Putnalu) is slow-roasted with aromatic spices, fiery Guntur red chillies, garlic, and traditional seasonings, then stone-ground to create a rich, nutty and flavourful podi.',
-    price: 249,
-    originalPrice: 280,
+    price: 70,
     weights: [
+      {
+        grams: 50,
+        label: '50g Pouch',
+        price: 35,
+      },
       {
         grams: 100,
         label: '100g Pouch',
-        price: 130,
-      },
-      {
-        grams: 200,
-        label: '200g Jar',
-        price: 249,
-      },
-      {
-        grams: 500,
-        label: '500g Value Pack',
-        price: 580,
+        price: 70,
       },
     ],
     spiciness: 2,
@@ -164,23 +146,17 @@ export const INITIAL_PODIS: PodiItem[] = [
     tagline: 'Crispy sun-dried bittergourd with tangy spiced magic',
     description:
       'Thinly sliced bittergourd sun-dried till crisp and pounded with roasted lentils, jaggery hint, and spices. Turns bitter gourd into an irresistible culinary masterpiece even kids adore.',
-    price: 299,
-    originalPrice: 350,
+    price: 80,
     weights: [
+      {
+        grams: 50,
+        label: '50g Pouch',
+        price: 40,
+      },
       {
         grams: 100,
         label: '100g Pouch',
-        price: 165,
-      },
-      {
-        grams: 200,
-        label: '200g Jar',
-        price: 299,
-      },
-      {
-        grams: 500,
-        label: '500g Value Pack',
-        price: 690,
+        price: 80,
       },
     ],
     spiciness: 2,
