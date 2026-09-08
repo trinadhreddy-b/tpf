@@ -269,6 +269,17 @@ export const CartDrawer: React.FC = () => {
                 <span>OR DM ON INSTAGRAM</span>
               </a>
 
+              {/* Continue Shopping button */}
+              <button
+                id="cart-continue-shopping-btn"
+                onClick={() => setIsCartDrawerOpen(false)}
+                className="w-full py-2.5 px-4 font-label-brand text-xs font-bold tracking-widest uppercase border border-brand-outline-variant/80 text-brand-on-surface hover:bg-brand-surface-container active:scale-98 transition-all cursor-pointer rounded-brand-btn flex items-center justify-center gap-2"
+                style={{ borderRadius: 'var(--radius-btn)' }}
+              >
+                <ShoppingBag className="w-4 h-4 text-brand-primary" />
+                <span>CONTINUE SHOPPING</span>
+              </button>
+
               <div className="text-[10px] text-center text-brand-muted">
                 🔒 Direct from batch kitchen • UPI / GPay / NetBanking accepted upon confirmation
               </div>
