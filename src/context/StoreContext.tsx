@@ -158,7 +158,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const total = itemsToOrder.reduce((sum, it) => sum + it.selectedWeight.price * it.quantity, 0);
       text += `\n💰 *Estimated Total:* ₹${total}\n`;
     } else {
-      text += `I would like to enquire about your fresh batch Andhra Podis.\n`;
+      text += `I would like to enquire about your fresh batch Karam Podis.\n`;
     }
 
     if (notes) {

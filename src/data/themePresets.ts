@@ -18,8 +18,8 @@ export const THEME_PRESETS: ThemeConfig[] = [
     cardRadius: '10px',
   },
   {
-    id: 'royal-andhra-ochre',
-    name: 'Royal Andhra Ochre & Gold',
+    id: 'royal-ochre',
+    name: 'Royal Ochre & Gold',
     primary: '#803c00',
     primaryHover: '#612d00',
     primaryContainer: '#9e4c00',

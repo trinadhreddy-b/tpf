@@ -13,7 +13,7 @@ export const FeatureHighlights: React.FC = () => {
       id: 'feature-sun-dried',
       icon: Sun,
       title: 'SUN-DRIED FOR RICH FLAVOUR',
-      description: 'Naturally dehydrated under the scorching Andhra sun for deep, concentrated taste.',
+      description: 'Naturally dehydrated under the sun for deep, concentrated taste.',
     },
     {
       id: 'feature-no-preservatives',
