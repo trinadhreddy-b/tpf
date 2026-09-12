@@ -228,7 +228,7 @@ export const PodisCatalog: React.FC = () => {
                     <div className="space-y-1 mb-3">
                       <h3
                         onClick={() => setSelectedPodi(podi)}
-                        className="text-xl sm:text-2xl font-serif-brand font-normal text-brand-on-surface hover:text-brand-primary cursor-pointer line-clamp-1"
+                        className="text-lg sm:text-xl font-serif-brand font-normal text-brand-on-surface hover:text-brand-primary cursor-pointer leading-snug line-clamp-2 min-h-[3rem] flex items-center"
                         style={{ color: 'var(--color-on-surface)' }}
                         title={podi.name}
                       >

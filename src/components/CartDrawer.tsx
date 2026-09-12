@@ -93,31 +93,6 @@ export const CartDrawer: React.FC = () => {
               </div>
             ) : (
               <>
-                {/* Free shipping progress bar */}
-                <div className="p-3 bg-brand-surface-container/80 rounded-lg text-xs space-y-1.5 border border-brand-outline-variant/30">
-                  <div className="flex justify-between font-semibold">
-                    <span>
-                      {isFreeDelivery ? (
-                        <span className="text-emerald-700 font-bold flex items-center gap-1">
-                          <Sparkles className="w-3.5 h-3.5" /> FREE India Delivery Unlocked!
-                        </span>
-                      ) : (
-                        <span>Add ₹{799 - total} more for Free Delivery</span>
-                      )}
-                    </span>
-                    <span>₹{total}/₹799</span>
-                  </div>
-                  <div className="w-full bg-brand-surface-dim h-2 rounded-full overflow-hidden">
-                    <div
-                      className="bg-brand-primary h-full transition-all duration-300"
-                      style={{
-                        width: `${Math.min(100, (total / 799) * 100)}%`,
-                        backgroundColor: isFreeDelivery ? '#10b981' : 'var(--color-primary)',
-                      }}
-                    />
-                  </div>
-                </div>
-
                 {/* Items */}
                 <div className="space-y-3">
                   {cart.map((item) => (
@@ -133,7 +108,7 @@ export const CartDrawer: React.FC = () => {
                       />
 
                       <div className="flex-1 min-w-0">
-                        <h5 className="font-serif-brand text-sm text-brand-on-surface truncate">
+                        <h5 className="font-serif-brand text-sm text-brand-on-surface line-clamp-2 leading-tight">
                           {item.podi.name}
                         </h5>
                         <p className="text-xs text-brand-on-surface-variant">

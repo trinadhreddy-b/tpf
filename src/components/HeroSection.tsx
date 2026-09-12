@@ -8,19 +8,19 @@ const HERO_SLIDES = [
     id: 1,
     titleLine1: 'Bitter. Bold.',
     titleAccent: 'Naturally Good.',
-    titleLine3: 'Kakara Karam.',
+    titleLine3: 'Kakarakaya Karam Podi.',
     subtitle:
       'A traditional podi made with bitter gourd, aromatic spices, and authentic home-style flavors.',
     image:
       'https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/kakarakay_hero_image_small.png',
-    imageAlt: 'Kakara Karam Podi',
+    imageAlt: 'Kakarakaya Karam Podi',
     tag: 'Traditional Recipe',
   },
   {
     id: 2,
     titleLine1: 'Aromatic.',
     titleAccent: 'Fresh & Earthy.',
-    titleLine3: 'Karivepaku Karam.',
+    titleLine3: 'Karivepaku Karam Podi.',
     subtitle:
       'Made with fragrant curry leaves and roasted spices for a delicious burst of traditional South Indian flavor.',
     image:
@@ -32,24 +32,24 @@ const HERO_SLIDES = [
     id: 3,
     titleLine1: 'Green Goodness.',
     titleAccent: 'Traditionally Made.',
-    titleLine3: 'Munaga Karam.',
+    titleLine3: 'Munagaku Karam Podi.',
     subtitle:
       'A flavorful podi crafted with nutrient-rich moringa leaves and carefully roasted traditional spices.',
     image:
       'https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/munagaku_hero_image_small.png',
-    imageAlt: 'Munaga Karam Podi',
+    imageAlt: 'Munagaku Karam Podi',
     tag: 'Made with Moringa Leaves',
   },
   {
     id: 4,
     titleLine1: 'Roasted.',
     titleAccent: 'Nutty & Delicious.',
-    titleLine3: 'Putnala Podi.',
+    titleLine3: 'Putnala Karam Podi.',
     subtitle:
       'A wholesome roasted podi with a rich nutty flavor, perfect with hot rice, ghee, idli, dosa, and more.',
     image:
       'https://cdn.jsdelivr.net/gh/trinadhreddy-b/assetsfortpf@main/putnalu_hero_image_small.png',
-    imageAlt: 'Putnala Podi',
+    imageAlt: 'Putnala Karam Podi',
     tag: 'Roasted to Perfection',
   },
 ];

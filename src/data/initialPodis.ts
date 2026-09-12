@@ -3,8 +3,8 @@ import { PodiItem, StoreSettings } from '../types';
 export const INITIAL_PODIS: PodiItem[] = [
   {
     id: 'munagaku-karam',
-    name: 'Munagaku Karam',
-    teluguName: 'మునగాకు కారం (Moringa Podi)',
+    name: 'Munagaku Karam Podi',
+    teluguName: 'మునగాకు కారం పొడి (Moringa Karam Podi)',
     tagline: 'Drumstick leaves with bold spices',
     description:
       'Our crown jewel. Hand-picked organic drumstick (Moringa) leaves sun-dried to lock in vital iron and antioxidants, slow-roasted with Guntur red chillies, garlic cloves, cumin, and roasted chana dal in stone mortar.',
@@ -50,8 +50,8 @@ export const INITIAL_PODIS: PodiItem[] = [
   },
   {
     id: 'karivepaku-karam',
-    name: 'Karivepaku Karam',
-    teluguName: 'కరివేపాకు కారం (Curry Leaf Podi)',
+    name: 'Karivepaku Karam Podi',
+    teluguName: 'కరివేపాకు కారం పొడి (Curry Leaf Podi)',
     tagline: 'Aromatic tender curry leaves & roasted lentils',
     description:
       'Fresh country curry leaves washed, sun-dehydrated, and stone-pounded with coriander seeds, black peppercorns, roasted lentils, and tamarind for an unmistakable earthy aroma and vibrant flavor punch.',
@@ -97,7 +97,7 @@ export const INITIAL_PODIS: PodiItem[] = [
   },
   {
     id: 'kandi-podi',
-    name: 'Putnala Podi',
+    name: 'Putnala Karam Podi',
     teluguName: 'పుట్నాల కారం పొడి',
     tagline: 'Classic roasted chana dal & fiery Guntur chillies',
     description:
@@ -141,8 +141,8 @@ export const INITIAL_PODIS: PodiItem[] = [
   },
   {
     id: 'kakarakaya-karam',
-    name: 'Kakarakaya Karam',
-    teluguName: 'కాకరకాయ కారం (Crispy Bittergourd Podi)',
+    name: 'Kakarakaya Karam Podi',
+    teluguName: 'కాకరకాయ కారం పొడి(Crispy Bittergourd Podi)',
     tagline: 'Crispy sun-dried bittergourd with tangy spiced magic',
     description:
       'Thinly sliced bittergourd sun-dried till crisp and pounded with roasted lentils, jaggery hint, and spices. Turns bitter gourd into an irresistible culinary masterpiece even kids adore.',
@@ -192,10 +192,10 @@ export const INITIAL_SETTINGS: StoreSettings = {
   whatsappNumber: '+916305986401',
   instagramHandle: 'the_podifactory',
   email: 'orders@thepodifactory.com',
-  phone: '+91 98765 43210',
-  address: 'Artisanal Batch Kitchen, Guntur & Hyderabad, India',
+  phone: '+916305986401',
+  address: 'The Podi Factory, Hyderabad, India',
   announcement:
-    '🌿 Small-batch fresh harvest podis now shipping across India! Free delivery on orders over ₹799',
-  upiId: 'thepodifactory@okaxis',
+    '🌿 Authentic Karam podis • Made in small batches • Shipping across India',
+  upiId: '',
   currencySymbol: '₹',
 };

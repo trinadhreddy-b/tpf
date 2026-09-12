@@ -8,15 +8,24 @@ export const AnnouncementBar: React.FC = () => {
   return (
     <div
       id="announcement-bar"
-      className="bg-brand-primary text-brand-on-primary py-2 px-4 text-xs sm:text-sm font-sans-brand transition-colors"
+      className="bg-brand-primary text-brand-on-primary py-2 px-4 text-xs sm:text-sm font-sans-brand transition-colors overflow-hidden"
       style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-on-primary)' }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-        <div className="flex items-center justify-center gap-2">
-          <Sparkles className="w-3.5 h-3.5 text-amber-200 shrink-0 animate-pulse" />
-          <span className="font-medium tracking-wide">{settings.announcement}</span>
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        {/* Scrolling Announcement */}
+        <div className="overflow-hidden flex-1 relative">
+          <div className="animate-marquee flex items-center shrink-0 cursor-default">
+            {[...Array(4)].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-2 pr-12 shrink-0">
+                <Sparkles className="w-3.5 h-3.5 text-amber-200 shrink-0 animate-pulse" />
+                <span className="font-medium tracking-wide">{settings.announcement}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-3 shrink-0">
+
+        {/* Theme Button */}
+        <div className="flex items-center shrink-0 z-10 pl-2">
           <button
             id="quick-theme-btn"
             onClick={() => setIsThemeDrawerOpen(true)}
